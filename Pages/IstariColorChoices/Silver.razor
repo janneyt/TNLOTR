@@ -1,0 +1,43 @@
+@page "/createcharacter/silver"
+@using Components.Buttons
+<h1>The Silver Sorceror</h1>
+
+<h4>Kin: The people of Varda</h4>
+<p>You are the <strong>silver</strong> Istari, not the gray Istari. Varda was very clear about this.</p>
+<p>Varda is queen of the stars, which makes you a sort of assistant servant to the prime minister's chamberlain of the stars. You take your role with good nature.</p>
+<p>Varda is known for her piercing stair, for her enthronement in heaven, and for the care she shows to mortal and Elven exiles in Middle Earth.</p>
+<p>You strive to emulate her, like a tiny asteroid circling the sun.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You are strongest at night, especially in starlight.</li>
+        <li>You are exceptionally wise, especially towards the Noldor.</li>
+        <li>You have the ability to read the stars and from it divine the mind of Varda, giving you a limited glimpse into the future of any creature born before the sun and moon.</li>
+        <li>Commoners naturally revere you.</li>
+        <li>Strong in light based magic.</li>
+        <li>You are good with any weapon with a silvery color.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>In sunlight and underground, you are weak.</li>
+        <li>Any creature created after the sun and moon is a mystery to you.</li>
+        <li>Weak to fire, earth and darkness based magic.</li>
+        <li>Pretty hopeless with any weapon not made out of polished steel.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Silver" OnClick="ChooseSilver" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseSilver()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

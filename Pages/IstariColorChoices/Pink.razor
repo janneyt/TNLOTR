@@ -1,0 +1,51 @@
+@page "/createcharacter/Pink"
+@using Components.Buttons
+<h1>The Pink Priest(ess)</h1>
+
+<h4>Kin: The people of Nienna</h4>
+<p>Nienna is the Lady of Mercy Acquainted With Grief. It's no surprise, then, that you are particularly strong in areas of willpower and mercy.</p>
+
+<p>Inherent strengths:
+    <ul>
+        <li>You start with the most willpower.</li>
+        <li>You can gain willpower from interacting with any creature, including positive and negative interactions.</li>
+        <li>You are exceptionally wise, especially towards the Noldor.</li>
+        <li>You have the ability to read the stars and from it divine the mind of Varda, giving you a limited glimpse into the future of any creature born before the sun and moon.</li>
+        <li>Commoners naturally revere you.</li>
+        <li>Strong in light based magic.</li>
+        <li>You are good with any weapon with a Pinky color.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>In sunlight and underground, you are weak.</li>
+        <li>Any creature created after the sun and moon is a mystery to you.</li>
+        <li>Weak to fire, earth and darkness based magic.</li>
+        <li>Pretty hopeless with any weapon not made out of polished steel.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Pink" OnClick="ChoosePink" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChoosePink()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}
+Indigo Wizard:
+
+    Strengths: Master of shadow and stealth, good at espionage, can manipulate darkness.
+    Weaknesses: Weakened in bright light, less effective in direct confrontation.
+
+Violet Wizard:
+
+    Strengths: Specializes in teleportation and dimensional magic, quick and unpredictable.
+    Weaknesses: Lower stamina, vulnerable when out of magical energy.

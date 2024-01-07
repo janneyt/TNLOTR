@@ -1,0 +1,41 @@
+@page "/createcharacter/golden"
+@using Components.Buttons
+<h1>The Golden Guardian</h1>
+
+<h4>Kin: The people of Vana</h4>
+
+<h4>Mission: You must find a major Orc chieftaina and cleanse him and his entire warband of Melkor's corruption.</h4>
+<p>You are of the kin of Vana, the goddess of spring and the golden hours of the day. Your entire life is about joy, both bringing it and preserving it.</p>
+<p>You are especially distraught when Melkor began his great discord during the song at the beginning of the world, and this memory has scarred you.</p>
+<p>You have actually been in Middle Earth before, appearing wherever you can find wildflowers and golden sunshine and tumbling brooks. Children can see you, although adults struggle to see you.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You can charm most creatures, including creatures of Melkor without strong will.</li>
+        <li>You can communicate with Valinor, not too often, but enough to receive both wisdom and help from the greater Valar.</li>
+        <li>Sylvan elves and the children of any species love you.</li>
+        <li>You have the power to remove corruption from any creature of your choosing.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>You cannot use weapons at all and most of your magic is defensive, protective or an illusion.</li>
+        <li>You are weakened in cold areas.</li>
+        <li>You are easily distracted.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Golden" OnClick="ChooseGolden" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseGolden()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}
