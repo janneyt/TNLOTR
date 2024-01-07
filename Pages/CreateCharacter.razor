@@ -1,0 +1,29 @@
+@page "/createcharacter"
+@using Components.Buttons
+<h3>Creating Your Istari</h3>
+
+<p>Every Istari must choose a color. These are specially chosen by the wisest of the Valar, with deep insight into your character.</p>
+
+<MyButton ButtonText="See Colors" OnClick="ShowColors" />
+<hr />
+@if(showColors)
+{
+    @foreach(var color in colors)
+    {
+        <input type="radio" @onclick="() => SelectColor(color)" />@color<br/>
+    }
+}
+
+@inject NavigationManager NavigationManager
+@code {
+    private bool showColors = false;
+    private string[] colors = new string[] { "Emerald", "Crimson" };
+    private void ShowColors()
+    {
+        showColors = !showColors;
+    }
+    private void SelectColor(string color)
+    {
+        NavigationManager.NavigateTo($"/createcharacter/{color}");
+    }
+}

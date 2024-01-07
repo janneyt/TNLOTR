@@ -1,3 +1,25 @@
-@page "/create/istari"
+@page "/"
+@using Microsoft.AspNetCore.Components
+@using Components.Explanations
 
 <h3>Hello Fellow Wizards</h3>
+
+@using Components.Buttons
+@using Components.Explanations
+<MyButton ButtonText="Create Istari" OnClick="ShowMessage"></MyButton>
+<LandingExplanation />
+@if(showMessage)
+{
+    <p>@message</p>
+}
+
+@code {
+    private string message = string.Empty;
+    private bool showMessage = false;
+    private void ShowMessage()
+    {
+        showMessage = !showMessage;
+        message = "You have created an Istari!";
+    }
+
+}

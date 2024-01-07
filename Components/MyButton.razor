@@ -1,0 +1,12 @@
+@namespace Components.Buttons
+@using Microsoft.AspNetCore.Components
+
+<button class="btn btn-primary" @onclick="OnClick">@ButtonText</button>
+
+@code {
+    [Parameter]
+    public string ButtonText { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+}
