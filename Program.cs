@@ -15,6 +15,9 @@ builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 builder.Logging.AddEventSourceLogger();
 
+// Add CosmosDB service
+var cosmosClient = new CosmosClient("connectionString");
+builder.Services.AddSingleton(cosmosClient);
 
 
 await builder.Build().RunAsync();
