@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/TNLOTR
+        run: dotnet publish -c Release -o ${{ github.workspace }}/TNLOTR
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'TNLOTR'
           slot-name: 'Production'
-          package: .
+          package: ${{ github.workspace }}/TNLOTR
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_487D705153C84866951C79156C9D0060 }}
