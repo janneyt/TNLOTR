@@ -1,0 +1,41 @@
+@page "/createcharacter/indigo"
+@using Components.Buttons
+<h1>The Indigo Inferno</h1>
+
+<h4>Kin: The people of Vaire</h4>
+<h4>Mission: There is a gnawing creature of Melkor that is devouring the threads Vaire is weaving. You must find this creature and kill it.</h4>
+<p>Vaire is the weaver of the tapestry that is time. All history is woven on her loom and all events can be found in the warp and woof.</p>
+<p>Thus, it's no surprise really that she is married to Mandos, the god of death and the doomsayer of the Valar.</p>
+<p>You are one of her weavers, gifted with a unique source of magic.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You do not use willpower for magic. Instead, you manipulate the threads of time, causing things to happen or fail to happen.</li>
+        <li>You cannot run out of magical ability, although there are caveats.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Anything unpredictable or chaotic, such as direct corruption, causes your magic to be less potent.</li>
+        <li>Your magic can be manipulated by creatures of Melkor with the right powers.</li>
+        <li>Every death is like a blow to your face.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Indigo" OnClick="ChooseIndigo" />
+</div>
+<div>
+    <img src="images/vaire.jpg" alt="Indigo" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseIndigo()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

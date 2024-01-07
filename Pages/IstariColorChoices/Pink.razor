@@ -1,4 +1,4 @@
-@page "/createcharacter/Pink"
+@page "/createcharacter/pink"
 @using Components.Buttons
 <h1>The Pink Priest(ess)</h1>
 
@@ -13,7 +13,6 @@
         <li>You have the ability to read the stars and from it divine the mind of Varda, giving you a limited glimpse into the future of any creature born before the sun and moon.</li>
         <li>Commoners naturally revere you.</li>
         <li>Strong in light based magic.</li>
-        <li>You are good with any weapon with a Pinky color.</li>
     </ul>
 </p>
 <p>
@@ -29,6 +28,9 @@
     <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
     <MyButton ButtonText="Choose Pink" OnClick="ChoosePink" />
 </div>
+<div>
+    <img src="images/nienna.jpg" alt="Pink" />
+</div>
 @inject NavigationManager NavigationManager
 @code {
     private void ReturnToColorChoices()
@@ -40,12 +42,3 @@
         NavigationManager.NavigateTo("/createcharacter");
     }
 }
-Indigo Wizard:
-
-    Strengths: Master of shadow and stealth, good at espionage, can manipulate darkness.
-    Weaknesses: Weakened in bright light, less effective in direct confrontation.
-
-Violet Wizard:
-
-    Strengths: Specializes in teleportation and dimensional magic, quick and unpredictable.
-    Weaknesses: Lower stamina, vulnerable when out of magical energy.

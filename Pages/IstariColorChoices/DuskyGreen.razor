@@ -1,0 +1,41 @@
+@page "/createcharacter/duskygreen"
+@using Components.Buttons
+<h1>The Green God(dess)</h1>
+
+<h4>Kin: The people of Orome</h4>
+<h4>Mission: There is a rot spreading through the animals of the world. Whatever it touches, it kills in a hideous and painful way. Find its cause, and stop it.</h4>
+<p>Orome has never abandoned Middle Earth and was the first Valar to find the Elves after they awoke. He is a great hunter, and wherever he travels all creatures of Morgoth flee.</p>
+<p>You are a lesser spirit of his people. You can track anything, hunt anything, and given enough time and cleverness, kill anything.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You are particularly adept with ranged weapons, using willpower to enhance accuracy and power.</li>
+        <li>You have a lot of endurance and can travel farther and faster than anyone else.</li>
+        <li>Once you have successfully begun tracking a creature, you never lose the track.</li>
+        <li>You cause creatures of Morgoth to take fright without expending willpower.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Artificial creatures go out of their way to attack you.</li>
+        <li>Shapeshifters particularly hate you.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Dusky Green" OnClick="ChooseDuskyGreen" />
+</div>
+<div>
+    <img src="images/orome.jpg" alt="Dusky Green" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseDuskyGreen()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

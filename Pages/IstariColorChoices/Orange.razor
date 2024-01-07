@@ -1,0 +1,45 @@
+@page "/createcharacter/orange"
+@using Components.Buttons
+<h1>The Orange Occlumancer</h1>
+
+<h4>Kin: The people of Aule</h4>
+<h4>Mission: Steal back the ancient Hammer of Aule, which Sauron stole during the rebellion of Melkor.</h4>
+<p>Aule, the creator of the dwarves, is the perfect foil to Melkor. Both are impatient, but only Aule is faithful. Both create their own imitations of the work of Eru, but only Aule petitions for the Dwarves to be given the gift of life.</p>
+<p>Aule is the great smith, the maker of metals and machines. Sauron once served under him and you were his lab partner, in a divine way.</p>
+<p>Now that rumors grow that Sauron did not die in the War of the Powers, you were approached by Aule himself and given a very important mission.</p>
+
+<p>Inherent strengths:
+    <ul>
+        <li>You can enchant pretty much any naturally occurring item, or remove the enchantment, depending on your wisdom.</li>
+        <li>You get on exceedingly well with Dwarves, who revere you as the servant of their greatest God.</li>
+        <li>Your power gets stronger in more desolate and arid areas, especially when machines are involved.</li>
+        <li>You are particularly good at fire magic.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>You are weakened when around too much nature.</li>
+        <li>Elves despise you as a traitor, and elf friends are suspicious of you.</li>
+        <li>You are weak to corruption - too similar to Sauron!</li>
+        <li>You start off with lower wisdom.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Orange" OnClick="ChooseOrange" />
+</div>
+<div>
+    <img src="images/aule.jpg" alt="Orange" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseOrange()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

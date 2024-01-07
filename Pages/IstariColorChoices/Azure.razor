@@ -1,0 +1,43 @@
+@page "/createcharacter/azure"
+@using Components.Buttons
+<h1>The Azure Ascendent</h1>
+
+<h4>Kin: The people of Ulmo</h4>
+<p>The people of Ulmo are like Ulmo, aloof and ever present at the same time.</p>
+<p>The ocean, Ulmo's domain, is mysterious but the source of life. You can be as unpredictable as the waves, or as stable as the deepest depths.</p>
+<p>Ulmo is second only to Melkor and Manwe in power. However, he is the most involved in Middle Earth. For this reason, the Elves say that all rivers carry news to Ulmo.</p>
+<p>This makes you a natural intelligence gathering spirit.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You have the fastest access to the Valar and receive explicit instructions back.</li>
+        <li>Any uncorrupted water creature can give you information or be made to do tasks, depending on your willpower.</li>
+        <li>You have a strength boost when near or using water, with significant bonus if the water comes from the ocean.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Your power is directly related to the prevalence of water.</li>
+        <li>You f***ing hate seagulls and they return the feeling. This causes you to have issues wherever they are prevalent.</li>
+        <li>You are weak to fire or most aggressive forms of magic.</li>
+        
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Azure" OnClick="ChooseAzure" />
+</div>
+<div>
+    <img src="images/ulmo.jpg" alt="Azure" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseAzure()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

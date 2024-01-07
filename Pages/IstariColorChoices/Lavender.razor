@@ -1,0 +1,48 @@
+@page "/createcharacter/lavender"
+@using Components.Buttons
+<h1>The Soft Lavender Luminary</h1>
+<div  class="grid-container" style="max-width:100%;height:auto;">
+    <div class="grid-item">
+        <h4>Kin: The people of Este</h4>
+        <p>Este is the Valar known for healing and rest. As one of her followers, you possess a calm and restorative aura.</p>
+        <p>The color soft lavender, reminiscent of healing herbs, represents your soothing and restorative nature.</p>
+        <p>You excel in healing magic and are able to restore both body and mind.</p>
+        <p>Inherent strengths:
+            <ul>
+                <li>You can heal injuries and cure ailments with your touch.</li>
+                <li>Your presence is calming, often diffusing tense situations.</li>
+                <li>You possess the ability to induce restful sleep, even in the most troubled minds.</li>
+            </ul>
+        </p>
+        <p>
+            Inherent weaknesses:
+            <ul>
+                <li>Your powers are less effective in chaotic or corrupted environments.</li>
+                <li>You require periods of solitude to rejuvenate your own energies.</li>
+                <li>Direct combat can be draining, making you rely more on your allies for protection.</li>
+            </ul>
+        </p>
+        <div>
+            <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+            <MyButton ButtonText="Choose Soft Lavender" OnClick="ChooseSoftLavender" />
+        </div>
+    </div>
+    <div class="grid-item" style="max-width:100%;height:auto;">
+        <div>
+            <img src="images/este.jpg" alt="Este" />
+        </div>
+    </div>
+</div>
+
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseSoftLavender()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    
+}

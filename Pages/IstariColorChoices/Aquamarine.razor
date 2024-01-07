@@ -1,0 +1,41 @@
+@page "/createcharacter/aquamarine"
+@using Components.Buttons
+<h1>The Aquamarine Arcanist</h1>
+
+<h4>Kin: The people of Lorien</h4>
+<p>Lorien is the master of dreams, visions and sleep. His people have a mystical quality, and among their numbers is a certain gray wizard.</p>
+<p>The color aquamarine is a natural color that looks artificial, much as the world of dreams feels real when it is in fact a vision. Or is it?</p>
+<p>You are a dreamweaver, a master of psychic powers and telekinesis.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You learn telekinetic and psychic powers very quickly.</li>
+        <li>You can enter the land of dreams and trap people there, effectively killing them while trapping them in their dreams.</li>
+        <li>You can use both telekinesis and telepathy.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>You are weak to overly skeptical people, especially humans.</li>
+        <li>Although you walk the land of dreams, other animals can trap you there to. It isn't permanent, but Lorien is getting tired of releasing you.</li>
+        <li>You are a bit squishy outside of the land of dreams.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Aquamarine" OnClick="ChooseAquamarine" />
+</div>
+<div>
+    <img src="images/lorien.jpg" alt="Lorien" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseAquamarine()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}
