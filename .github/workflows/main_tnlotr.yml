@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/TNLOTR
+          path: ${{ github.workspace }}/TNLOTR
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,6 +52,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'TNLOTR'
-          slot-name: 'Production'
           package: ${{ github.workspace }}/TNLOTR
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_487D705153C84866951C79156C9D0060 }}
