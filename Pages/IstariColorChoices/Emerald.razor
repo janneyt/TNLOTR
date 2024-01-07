@@ -1,0 +1,40 @@
+@page "/createcharacter/emerald"
+@using Components.Buttons
+<h1>The Emerald Evocator</h1>
+
+<h4>Kin: The people of Yavanna</h4>
+<p>Emerald, the color of the Blessed Isle. The color is especially sacred to the elves who did not cross the Great Sea and have never seen Valinor.</p>
+<p>Mission: Convince a major Sindarin king or queen to cross the Great Sea and join their kin in Valinor.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>Elves find you persuasive.</li>
+        <li>You are skilled at interpreting dreams.</li>
+        <li>Profound connection with nature.</li>
+        <li>You heal quickly, especially in lush, forested areas.</li>
+        <li>You can communicate with plants (faintly, scales with wisdom)</li> exceptional healing abilities, can communicate with animals and plants.
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Dwarves find you suspicious and lock their doors as you walk by.</li>
+        <li>Less adept in urban environments.</li>
+        <li>Weakened in desolate or barren areas.</li>
+        <li>Prone to excessive idealism.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Emerald" OnClick="ChooseEmerald" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseEmerald()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

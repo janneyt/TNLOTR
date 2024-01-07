@@ -1,0 +1,43 @@
+@page "/createcharacter/crimson"
+@using Components.Buttons
+<h1>The Crimson Conjuror</h1>
+
+<h4>Kin: The people of Manwe</h4>
+<p>Crimson, the color of royalty and the color of blood. You have been sent to show that not all kings are murderers.</p>
+<p>When the Elves left Valinor, the Valar realize they had made a great mistake. In looking to protect the elves from the evil of Melkor, they instead imprisoned the Elves in paradise.</p>
+<p>Although many Elves have remained in Valinor for over fifteen thousand years in unparalleled bliss, still, some rebelled. Led astray by the lust of Feanor for his stolen jewels, the Silmarils, the Noldorin Elves hacked their way out of Valinor and fought Melkor in Middle Earth for five hundred years.</p>
+<p>You were part of the relief mission, led by Eonwe, the Herald of Valinor. You remember the battlefields strewn with blood, the gore and the violation of everything sacred. In your heart, you vowed holy vengeance on Melkor for causing this great crime.</p>
+<p>Now, Manwe himself has chosen you to return to Middle Earth and show the world Valinor's justice and purity. And, perhaps, you are here to atone for the wrongs of your people, fifteen thousand years ago.</p>
+<p>
+    Inherent strengths:
+    <ul>
+        <li>People in authority naturally believe you.</li>
+        <li>You learn spells of power quickly.</li>
+        <li>Humans find you charismatic and will follow you into battle.</li>
+        <li>You are particularly skilled with melee weapons.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Commoners find you haughty and will go out of their way to resist you.</li>
+        <li>Orcs have a habit of thinking you are a Maiar of Sauron and will try to follow you.</li>
+        <li>Elves distrust you.</li>
+        <li>Prone to haughtiness and a desire to rule.</li>
+    </ul>
+</p>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Crimson" OnClick="ChooseCrimson" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseCrimson()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}
