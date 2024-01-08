@@ -2,48 +2,55 @@
 @using Components.Buttons
 @using Microsoft.AspNetCore.Components
 
-<p>We are going to create an Istari</p>
-<div>
-    <MyButton ButtonText="What is an Istari?" OnClick="ExplainIstari" />
-    <MyButton ButtonText="tldr; create character" OnClick="CreateCharacter" />
-</div>
-<div>
-    @if(explainIstari)
-    {
-        <p>Long ago, there was only Eru Iluvatar, the One. But then he created the lesser deities, the Ainur. They sang before Eru Iluvatar and from that song all things began.</p>
-        <p>Among the Ainur, there were the Valar, the most powerful of the Ainur. The Valar were the ones who shaped the world
-        in the song of the Ainur at the beginning of the world.</p>
-        <p>Greatest of all the Valar was Melkor, who brought discord to the song of the Ainur. His brother, and near-equal, is Manwe, ruler of the world under Eru Iluvator.</p>
-        <p>Melkor has been forced from the world during the War of the Powers, after ages of treacher and evil. However, the stink of his evil is left behind. Everything that was once fair and beautiful is corrupted.</p>
-        <p>Seeing the terrible plight of the world, Manwe has sent the Istari, divine messengers and wizards, to cleanse Middle Earth of the horrible evil of Melkor's reign.</p>
-        <p>You are one of them.</p>
-    }
-    @if(createCharacter)
-    {
-        <p>Let's create a character!</p>
-        <MyButton ButtonText="Create Character" OnClick="NavigateToCreateCharacter" />
-    }
-</div>
-
+@foreach (var message in _messages.Take(currentMessageIndex + 1))
+{
+    <p>@message</p>
+}
+<MyButton ButtonText="Next" OnClick="DisplayNextMessage" />
+@if(createCharacter)
+{
+    <MyButton ButtonText="Create Character" OnClick="NavigateToCreateCharacter" />
+}
 @inject NavigationManager NavigationManager
 @code {
-    public bool createCharacter { get; set; } = false;
+    private List<string> _messages = new List<string>()
+    {
+        string.Empty,
+        "Long ago, there was only Eru Iluvatar, the One. But then he created the lesser deities, the Ainur. They sang before Eru Iluvatar and from that song all things began.",
+        "Among the Ainur, there were the Valar, the most powerful of the Ainur. The Valar were the ones who shaped the world in the song of the Ainur at the beginning of the world.",
+        "Greatest of all the Valar was Melkor, who brought discord to the song of the Ainur. His brother, and near-equal, is Manwe, ruler of the world under Eru Iluvator.",
+        "Melkor has been forced from the world during the War of the Powers, after ages of treacher and evil. However, the stink of his evil is left behind. Everything that was once fair and beautiful is corrupted.",
+        "Seeing the terrible plight of the world, Manwe has sent the Istari, divine messengers and wizards, to cleanse Middle Earth of the horrible evil of Melkor's reign.",
+        "You are one of them."
+    };
 
+    private int currentMessageIndex = 0;
+
+    public bool createCharacter { get; set; } = false;
     public bool explainIstari { get; set; } = false;
-    [Parameter]
-    public EventCallback OnClick { get; set; }
 
     public void ExplainIstari()
     {
         explainIstari = !explainIstari;
     }
+
     public void CreateCharacter()
     {
         createCharacter = !createCharacter;
     }
+
     public void NavigateToCreateCharacter()
     {
         NavigationManager.NavigateTo("/createcharacter");
     }
 
+    public void DisplayNextMessage()
+    {
+        currentMessageIndex++;
+        if (currentMessageIndex >= _messages.Count)
+        {
+            currentMessageIndex = 0;
+            createCharacter = true;
+        }
+    }
 }
