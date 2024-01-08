@@ -55,3 +55,9 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA96D4309AF14E1B96E5D4F38CE70163 }}
+
+      - name: Start the deployed app
+        run: |
+          az webapp start --name tnlotr --resource-group TNLOTR
+
+      
