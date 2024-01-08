@@ -54,7 +54,7 @@ jobs:
           app-name: 'tnlotr'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA96D4309AF14E1B96E5D4F38CE70163 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_426869323B3E4D5EB7BEF069035121DC }}
 
       - name: Start the deployed app
         run: |
