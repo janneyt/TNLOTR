@@ -1,5 +1,9 @@
 @page "/createcharacter/violet"
 @using Components.Buttons
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Violet" OnClick="ChooseViolet" />
+</div>
 <h1>The Violet Vampirehunter</h1>
 
 <h4>Kin: The people of Nessa</h4>
@@ -33,7 +37,7 @@
 </div>
 <div>
     <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
-    <MyButton ButtonText="Choose Indigo" OnClick="ChooseIndigo" />
+    <MyButton ButtonText="Choose Violet" OnClick="ChooseViolet" />
 </div>
 <div>
     <img src="images/nessa.jpg" alt="Violet" />
@@ -44,7 +48,7 @@
     {
         NavigationManager.NavigateTo("/createcharacter");
     }
-    private void ChooseIndigo()
+    private void ChooseViolet()
     {
         NavigationManager.NavigateTo("/createcharacter");
     }

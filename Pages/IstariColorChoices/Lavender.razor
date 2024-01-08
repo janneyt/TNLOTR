@@ -1,6 +1,10 @@
 @page "/createcharacter/lavender"
 @using Components.Buttons
 <h1>The Soft Lavender Luminary</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Lavender" OnClick="ChooseLavender" />
+</div>
 <div  class="grid-container" style="max-width:100%;height:auto;">
     <div class="grid-item">
         <h4>Kin: The people of Este</h4>
@@ -32,7 +36,7 @@
         </ul>
         <div>
             <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
-            <MyButton ButtonText="Choose Soft Lavender" OnClick="ChooseSoftLavender" />
+            <MyButton ButtonText="Choose Lavender" OnClick="ChooseLavender" />
         </div>
     </div>
     <div class="grid-item" style="max-width:100%;height:auto;">
@@ -48,7 +52,7 @@
     {
         NavigationManager.NavigateTo("/createcharacter");
     }
-    private void ChooseSoftLavender()
+    private void ChooseLavender()
     {
         NavigationManager.NavigateTo("/createcharacter");
     }

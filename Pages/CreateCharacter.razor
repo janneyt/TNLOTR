@@ -1,7 +1,7 @@
 @page "/createcharacter"
 @using Components.Buttons
-<h3>Creating Your Istari</h3>
-
+<h1>Creating Your Istari</h1>
+<MyButton ButtonText="Back" OnClick="Back" />
 <p>Every Istari must choose a color. These are specially chosen by the wisest of the Valar, with deep insight into your character.</p>
 
 <MyButton ButtonText="See Colors" OnClick="ShowColors" />
@@ -26,5 +26,10 @@
     private void SelectColor(string color)
     {
         NavigationManager.NavigateTo($"/createcharacter/{color}");
+    }
+
+    private void Back()
+    {
+        NavigationManager.NavigateTo("/");
     }
 }
