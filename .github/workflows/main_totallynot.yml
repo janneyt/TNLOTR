@@ -26,7 +26,10 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release --self-contained -r ubuntu-lates -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release --self-contained -r ubuntu-latest -o ${{env.DOTNET_ROOT}}/myapp
+
+      - name: List files in artifact directory
+        run: ls -R ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
