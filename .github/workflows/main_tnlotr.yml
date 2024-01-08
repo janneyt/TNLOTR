@@ -52,7 +52,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'tnlotr'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_426869323B3E4D5EB7BEF069035121DC }}
 
 
