@@ -1,0 +1,55 @@
+@page "/createcharacter/obsidian"
+@using Components.Buttons
+<h1>The Obsidian Orderer</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Obsidian" OnClick="ChooseObsidian" />
+</div>
+<h4>Kin: The people of Mandos</h4>
+<h4>Mission: There are rumors of necromancers trying to steal souls from the halls of Mandos. Extinguish them.</h4>
+<p>In all the world under Eru Iluvator, Mandos the god of death is inevitable. From his dark and lonely halls, he sees out into the past and the future, watching the fates of Arda, the Universe itself.</p>
+<p>You have been sent as his mystic messenger, a being of dignity and fearsomeness as uncompromising as the grave.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You terrify any creature foolish enough to attack you, lowering their will. +25% chance of frightening a creature with lower willpower than you.</li>
+        <li>You can pray to your superior, Mandos, and receive a limited vision of the future. This recharges your willpower.</li>
+        <li>You can, for a little while, make yourself difficult to see, like a gray mist or cloud. +10% chance of avoiding detection while cloaked.</li>
+        <li>You can smell recent death. +1 Wisdom when there are dead bodies.</li>
+        <li>You recharge your magic by making sure people follow proper rituals at death in accordance with their own cultural customs.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Social interactions are both confusing and frequently short lived with you. -2 Wisdom when attempting social interactions.</li>
+        <li>More powerful beings may attempt to exclude you entirely from their realm. -5 Willpower when dealing with powerful beings BUT +3 Wisdom.</li>
+        <li>Although you are feared, you are rarely trusted or believed. -2 Wisdom when attempting to get people to trust or believe you.</li>
+        <li>You are incredibly tired of people asking you where humans go after they die. +10% chance of getting an annoying question when talking to humans.</li>
+        <li>You are slightly offended the party is forbidden from killing humans or elves. -2 Wisdom if an opposing elf or man is close to death.</li>
+    </ul>
+</p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+5 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+3 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+1 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+1 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Obsidian" OnClick="ChooseObsidian" />
+</div>
+<div>
+    <img src="images/mandos.jpg" alt="Obsidian" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseObsidian()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

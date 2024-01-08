@@ -1,20 +1,35 @@
 @page "/createcharacter/crimson"
 @using Components.Buttons
 <h1>The Crimson Conjuror</h1>
-
-<h4>Kin: The people of Manwe</h4>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Crimson" OnClick="ChooseCrimson" />
+</div>
+<h4>Kin: The people of Tulkas</h4>
+<h4>Mission: There is a rumor that one of the sons of Feanor has survived, and with a Silmaril! This is not his, it belongs in Valinor! Retrieve it or disprove this rumor.</h4>
 <p>Crimson, the color of royalty and the color of blood. You have been sent to show that not all kings are murderers.</p>
 <p>When the Elves left Valinor, the Valar realize they had made a great mistake. In looking to protect the elves from the evil of Melkor, they instead imprisoned the Elves in paradise.</p>
 <p>Although many Elves have remained in Valinor for over fifteen thousand years in unparalleled bliss, still, some rebelled. Led astray by the lust of Feanor for his stolen jewels, the Silmarils, the Noldorin Elves hacked their way out of Valinor and fought Melkor in Middle Earth for five hundred years.</p>
 <p>You were part of the relief mission, led by Eonwe, the Herald of Valinor. You remember the battlefields strewn with blood, the gore and the violation of everything sacred. In your heart, you vowed holy vengeance on Melkor for causing this great crime.</p>
-<p>Now, Manwe himself has chosen you to return to Middle Earth and show the world Valinor's justice and purity. And, perhaps, you are here to atone for the wrongs of your people, fifteen thousand years ago.</p>
+<p>Now, Tulkas himself has chosen you to return to Middle Earth and show the world Valinor's justice and purity. And, perhaps, you are here to atone for the wrongs of your people, fifteen thousand years ago.</p>
 <p>
     Inherent strengths:
     <ul>
-        <li>People in authority naturally believe you.</li>
-        <li>You learn spells of power quickly.</li>
-        <li>Humans find you charismatic and will follow you into battle.</li>
-        <li>You are particularly skilled with melee weapons.</li>
+        <li>People in authority naturally believe you. +2 Wisdom when dealing with people in authority</li>
+        <li>You learn spells of power quickly.+10% boost in learning aggressive magic.</li>
+        <li>Humans find you charismatic and will follow you into battle.
+            <ul>
+                <li>+1 Wisdom when dealing with humans.</li>
+                <li>+2 Wisdom when leading humans in battle.</li>
+            </ul>
+        </li>
+        <li>You are particularly skilled with melee weapons.
+            <ul>
+                <li>+1 Strength when using your fists.</li>
+                <li>+2 Strength when using melee weapons in battle.</li>
+            </ul>
+        </li>
+        <li>You recharge your magic by punching things. Any thing. Except for elves or men.</li>
     </ul>
 </p>
 <p>
@@ -26,9 +41,19 @@
         <li>Prone to haughtiness and a desire to rule.</li>
     </ul>
 </p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+0 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+0 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+0 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+10 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
 <div>
     <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
     <MyButton ButtonText="Choose Crimson" OnClick="ChooseCrimson" />
+</div>
+<div>
+    <img src="images/tulkas.jpg" alt="Crimson" />
 </div>
 @inject NavigationManager NavigationManager
 @code {

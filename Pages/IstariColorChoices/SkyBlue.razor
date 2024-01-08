@@ -1,0 +1,52 @@
+@page "/createcharacter/skyblue"
+@using Components.Buttons
+<h1>The Sky Blue Sage</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose SkyBlue" OnClick="ChooseSkyBlue" />
+</div>
+<h4>Kin: The people of Manwe</h4>
+<p>Manwe is the Lord of the Winds and the King of the Valar. His followers are often seen as lofty and distant, like the skies themselves.</p>
+<p>The color sky blue represents the vastness of the heavens and the freedom of the winds. As a follower of Manwe, you embody the power of the air and the skies.</p>
+<p>You are a master of weather control and aerial magics.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You can control weather patterns and summon storms or clear skies at will. +2 Willpower when dealing with weather magic.</li>
+        <li>Your affinity with birds allows you to communicate with them and see through their eyes. +2 Wisdom when using birds.</li>
+        <li>You are adept at wind-based magic, able to fly or levitate objects effortlessly. +2 Willpower when using this type of magic.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Enclosed spaces or areas devoid of air currents limit your powers. -3 Willpower when in any space without wind.</li>
+        <li>Your lofty perspective can sometimes make you seem detached or aloof. -3 Wisdom when interacting with commoners.</li>
+        <li>Direct confrontation is not your forte; you prefer to work at a distance. -2 Strength in melee combat.</li>
+    </ul>
+</p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+2 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+5 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+1 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+2 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Sky Blue" OnClick="ChooseSkyBlue" />
+</div>
+<div>
+    <img src="images/manwe.jpg" alt="Manwe" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseSkyBlue()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    
+}

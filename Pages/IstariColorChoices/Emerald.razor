@@ -1,31 +1,44 @@
 @page "/createcharacter/emerald"
 @using Components.Buttons
 <h1>The Emerald Evocator</h1>
-
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Emerald" OnClick="ChooseEmerald" />
+</div>
 <h4>Kin: The people of Yavanna</h4>
 <p>Emerald, the color of the Blessed Isle. The color is especially sacred to the elves who did not cross the Great Sea and have never seen Valinor.</p>
 <p>Mission: Convince a major Sindarin king or queen to cross the Great Sea and join their kin in Valinor.</p>
 <p>Inherent strengths:
     <ul>
-        <li>Elves find you persuasive.</li>
-        <li>You are skilled at interpreting dreams.</li>
-        <li>Profound connection with nature.</li>
-        <li>You heal quickly, especially in lush, forested areas.</li>
-        <li>You can communicate with plants (faintly, scales with wisdom)</li> exceptional healing abilities, can communicate with animals and plants.
+        <li>Elves find you persuasive. +2 Wisdom when interacting with Elves.</li>
+        <li>Profound connection with nature. +2 Wisdom when interacting with animals or plants.</li>
+        <li>You heal quickly, especially in lush, forested areas. -10% damage when there is sufficient vegetation.</li>
+        <li>You can communicate with plants (faintly, scales with wisdom). 10 Wisdom to get your first communication.</li>
+        <li>You recharge your magic by being near plants.</li>
     </ul>
 </p>
 <p>
     Inherent weaknesses:
     <ul>
-        <li>Dwarves find you suspicious and lock their doors as you walk by.</li>
-        <li>Less adept in urban environments.</li>
-        <li>Weakened in desolate or barren areas.</li>
-        <li>Prone to excessive idealism.</li>
+        <li>Dwarves find you suspicious and lock their doors as you walk by. -3 Wisdom when interacting with dawrves.</li>
+        <li>Less adept in urban environments. -1 Wisdom when in an urban area.</li>
+        <li>Weakened in desolate or barren areas. -2 Willpower in desolate and barren areas.</li>
+        <li>Prone to excessive idealism. -2 Wisdom when dealing with people who are duplicitous.</li>
     </ul>
 </p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+1 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+4 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+4 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+1 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
 <div>
     <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
     <MyButton ButtonText="Choose Emerald" OnClick="ChooseEmerald" />
+</div>
+<div>
+    <img src="images/yavanna.jpg" alt="Emerald" />
 </div>
 @inject NavigationManager NavigationManager
 @code {

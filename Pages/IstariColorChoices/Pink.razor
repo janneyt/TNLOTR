@@ -1,0 +1,55 @@
+@page "/createcharacter/pink"
+@using Components.Buttons
+<h1>The Pink Priest(ess)</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Pink" OnClick="ChoosePink" />
+</div>
+<h4>Kin: The people of Nienna</h4>
+<p>Nienna is the Lady of Mercy Acquainted With Grief. It's no surprise, then, that you are particularly strong in areas of willpower and mercy.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You start with the most willpower.</li>
+        <li>You can gain willpower from interacting with any creature with greater willpower than yours, including positive and negative interactions.
+            <ul>
+                <li>Positive interactions: +2 willpower</li>
+                <li>Negative interactions: +1 willpower</li>
+            </ul>
+        </li>
+        <li>You can absorb emotional states from others, using them to strengthen your willpower and understanding. This can turn grief into a source of strength, providing you with insights or temporary boosts in certain situations. +3 Strength after comforting the grieving.</li>
+        <li>You gain enhanced protective abilities when defending those who are weak, weary, or in mourning, reflecting Nienna's guardianship over those who suffer. +3 Willpower when defending the weary.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>In darkness and underground, you are weak. -2 Willpower in these conditions.</li>
+        <li>Any creature created after the sun and moon is a mystery to you. -3 Wisdom when interacting with humans and hobbits.</li>
+        <li>Weak to fire, earth and darkness based magic. -2 Strength when interacting with those magical systems.</li>
+    </ul>
+</p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+6 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+5 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+0 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>-1 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Pink" OnClick="ChoosePink" />
+</div>
+<div>
+    <img src="images/nienna.jpg" alt="Pink" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChoosePink()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

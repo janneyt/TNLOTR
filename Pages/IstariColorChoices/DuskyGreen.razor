@@ -1,0 +1,67 @@
+@page "/createcharacter/duskygreen"
+@using Components.Buttons
+<h1>The Green God(dess)</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose DuskyGreen" OnClick="ChooseDuskyGreen" />
+</div>
+<h4>Kin: The people of Orome</h4>
+<h4>Mission: There is a rot spreading through the animals of the world. Whatever it touches, it kills in a hideous and painful way. Find its cause, and stop it.</h4>
+<p>Orome has never abandoned Middle Earth and was the first Valar to find the Elves after they awoke. He is a great hunter, and wherever he travels all creatures of Morgoth flee.</p>
+<p>You are a lesser spirit of his people. You can track anything, hunt anything, and given enough time and cleverness, kill anything.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You are particularly adept with ranged weapons, using willpower to enhance accuracy and power.
+            <ul>
+                <li>+2 Agility when using ranged weapons.</li>
+                <li>+3 Strength when using ranged weapons.</li>
+            </ul>                           
+        </li>
+        <li>You have a lot of endurance and can travel farther and faster than anyone else.
+            <ul>
+                <li>+1 Agility when traveling.</li>
+                <li>+1 Strength when traveling.</li>
+            </ul>
+        </li>
+        <li>Once you have successfully begun tracking a creature, you never lose the track. You can at any time request an update on their whereabouts. You can only track one thing at a time.</li>
+        <li>You cause creatures of Morgoth to take fright without expending willpower. Roll a die for a chance to make them run away.</li>
+        <li>You recharge your magic by successfully hunting or investigating something.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>Artificial creatures go out of their way to attack you.
+            <ul>
+                <li>-3 Willpower when dealing with artificial creatures made by servants of the Enemy.</li>
+                <li>-1 Willpower when dealing with artificial creatures not made by servants of the Enemy.</li>
+            </ul>
+        </li>
+        <li>Shapeshifters particularly hate you. -2 Wisdom when dealing with shapeshifters.</li>
+    </ul>
+</p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+0 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+0 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+5 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+5 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Dusky Green" OnClick="ChooseDuskyGreen" />
+</div>
+<div>
+    <img src="images/orome.jpg" alt="Dusky Green" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseDuskyGreen()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}

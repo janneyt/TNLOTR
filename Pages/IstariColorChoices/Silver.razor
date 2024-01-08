@@ -1,0 +1,55 @@
+@page "/createcharacter/silver"
+@using Components.Buttons
+<h1>The Silver Sorceror</h1>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Silver" OnClick="ChooseSilver" />
+</div>
+<h4>Kin: The people of Varda</h4>
+<p>You are the <strong>silver</strong> Istari, not the gray Istari. Varda was very clear about this.</p>
+<p>Varda is queen of the stars, which makes you a sort of assistant servant to the prime minister's chamberlain of the stars. You take your role with good nature.</p>
+<p>Varda is known for her piercing stair, for her enthronement in heaven, and for the care she shows to mortal and Elven exiles in Middle Earth.</p>
+<p>You strive to emulate her, like a tiny asteroid circling the sun.</p>
+<p>Inherent strengths:
+    <ul>
+        <li>You are strongest at night, especially in starlight. +4 Willpower when in those conditions.</li>
+        <li>You are exceptionally wise, especially towards the Noldor. +4 Wisdom when interacting with the Noldor.</li>
+        <li>You have the ability to read the stars and from it divine the mind of Varda, giving you a limited glimpse into the future of any creature born before the sun and moon. +2 Wisdom when interacting with anything from before the sun and moon.</li>
+        <li>Commoners naturally revere you. +1 Wisdom when interacting with commoners.</li>
+        <li>You are good with any weapon with a silvery color. +2 Agility when using a weapon made of silver.</li>
+    </ul>
+</p>
+<p>
+    Inherent weaknesses:
+    <ul>
+        <li>In sunlight and underground, you are weak.</li>
+        <li>Any creature created after the sun and moon is a mystery to you.</li>
+        <li>Weak to fire, earth and darkness based magic.</li>
+        <li>Pretty hopeless with any weapon not made out of polished steel.</li>
+    </ul>
+</p>
+<h4>Starting Stats</h4>
+    <ul>
+        <li>+4 Willpower (WP): Represents mental fortitude and resistance to magical corruption.</li>
+        <li>+4 Wisdom (WD): Indicates knowledge of lore, understanding of nature, and strategic thinking.</li>
+        <li>+1 Agility (AG): Determines speed, reflexes, and ability to navigate terrain.</li>
+        <li>+2 Strength (ST): Reflects physical power and endurance.</li>
+    </ul>
+<div>
+    <MyButton ButtonText="Back To Color Choices" OnClick="ReturnToColorChoices" />
+    <MyButton ButtonText="Choose Silver" OnClick="ChooseSilver" />
+</div>
+<div>
+    <img src="images/varda.jpg" alt="Silver" />
+</div>
+@inject NavigationManager NavigationManager
+@code {
+    private void ReturnToColorChoices()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+    private void ChooseSilver()
+    {
+        NavigationManager.NavigateTo("/createcharacter");
+    }
+}
